@@ -1,0 +1,53 @@
+﻿@model FakePoeOauth.Web.Models.AuthorizeParams
+
+@{
+    ViewData["Title"] = "Authorize";
+}
+
+<h1>Authorize</h1>
+
+<div>
+    <h4>Here would probably be a page where the user would be asked to sign in and consent permissions.</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.client_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.client_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.response_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.response_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.scope)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.scope)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.redirect_uri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.redirect_uri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prompt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.prompt)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Consent", "Consent", Model)
+</div>
